@@ -71,28 +71,16 @@ export const App = () => {
   };
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'start',
-        alignItems: 'center',
-        fontSize: 40,
-        marginTop: '10px',
-        color: '#010101',
-      }}
-    >
-      <Container>
-        <Title>Phonebook</Title>
-        <ContactForm onSubmit={addContact} />
+    <Container>
+      <Title>Phonebook</Title>
+      <ContactForm onSubmit={addContact} />
 
-        <Subtitle>Contacts</Subtitle>
-        <Filter onChange={handleChangeFilter} filterValue={filter} />
-        <ContactList
-          contacts={visibleContacts()}
-          onDeleteContact={contactDelete}
-        />
-      </Container>
-    </div>
+      <Subtitle>Contacts</Subtitle>
+      <Filter onChange={handleChangeFilter} filterValue={filter} />
+      <ContactList
+        contacts={visibleContacts()}
+        onDeleteContact={contactDelete}
+      />
+    </Container>
   );
 };
